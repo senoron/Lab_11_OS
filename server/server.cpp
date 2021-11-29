@@ -15,71 +15,68 @@
 
 using namespace std;
 
-string pricesFileName = "Prices.json";
+string pricesFileName = "Prices.json"; // file with all updating prices
 
 int main()
 {
     int handleFile;
     void* pBuf;
 
-    sem_t* semptr = sem_open(semName, O_CREAT ,  0666 , 1);
+    sem_t* semptr = sem_open(semName, O_CREAT ,  0666 , 1); // creating semaphore
     int temp = -2;
     
-    if(semptr == SEM_FAILED) {
+    if(semptr == SEM_FAILED) { // failed to create the semaphore
     	printf("Error with pBuf");
     }
 
 
-    handleFile = shm_open(memoryName , O_CREAT | O_RDWR , 0666);
-    ftruncate(handleFile, sharedSize);
+    handleFile = shm_open(memoryName , O_CREAT | O_RDWR , 0666); // creating sharing memory
+    ftruncate(handleFile, sharedSize); // cutting file size
 
-    pBuf = mmap(NULL , sharedSize , PROT_WRITE | PROT_READ , MAP_SHARED , handleFile , 0);
+    pBuf = mmap(NULL , sharedSize , PROT_WRITE | PROT_READ , MAP_SHARED , handleFile , 0); // getting pointer to shring mem
     
-    if(!pBuf) {
+    if(!pBuf) { // error with pointer
     	printf("Error with pBuf");
     }
 
-    //system("node ../crypto-loader/index.js");
+    pid_t runner = fork(); // creating process for auto updating crypto currencies
+    if(runner == 0){
+        char* args[2];
+        args[0] = ".//crypto-runner";   
+        args[1] = NULL;
+
+        execvp(args[0], args);
+    }
+
     int i = 0;
+
+    int longSleep = 15; // waiting for crypto to be updated
+    int shortSleep = 5; // waiting for clients to read the mem
+
     while(1)
-    {
-        printf("I go\n");
-        
+    {   
     	sem_wait(semptr);
     	
-    	printf("I some sleep\n");
-    	
-    	sem_getvalue(semptr , &temp);
-        printf("value sem : %d\n" , temp);
-        
-        sleep(30);
+        sleep(longSleep);
 
-    	printf("I slept\n");
-    	
-        ifstream file;
-        file.open("Prices.json");
+        ifstream file; // reating from file with updated crypto
+        file.open(pricesFileName);
         string str = "";
         getline(file, str);
-        cout << str.size() << endl;
-        cout << str << endl;
         file.close();
 
-        const char * mess = str.c_str();
+        const char * mess = str.c_str(); // string to char*
 
-      	sprintf((char*)pBuf , "%s" , mess);
-      		
-      	printf("I send date\n");
+      	sprintf((char*)pBuf , "%s" , mess); // writing to memory
       	
     	sem_post(semptr);
     	
-    	sem_getvalue(semptr , &temp);
-    	printf("value sem : %d\n" , temp);
-    	sleep(3);
-    	
+    	sleep(shortSleep); // time for clients to read the memory 
     }
     
     
     close(handleFile);
     sem_close(semptr);
-    shm_unlink("file");
+    shm_unlink(memoryName);
+    kill(runner, 200);
 }

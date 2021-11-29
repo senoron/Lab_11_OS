@@ -2,8 +2,8 @@
 #define CONSTS_H
 
 #define sharedSize 4096
-#define semName "sem12"
-#define memoryName "file12"
+#define semName "semm"
+#define memoryName "filee"
 
 
 #endif
