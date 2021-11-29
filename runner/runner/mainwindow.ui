@@ -73,7 +73,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Clients:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="textEdit_clients">
     <property name="geometry">
      <rect>
       <x>270</x>
@@ -81,6 +81,19 @@
       <width>191</width>
       <height>121</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_run_serveer">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Run Server</string>
     </property>
    </widget>
   </widget>
