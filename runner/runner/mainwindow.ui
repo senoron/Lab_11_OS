@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>110</y>
+      <y>10</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>110</y>
+      <y>10</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -40,8 +40,8 @@
    <widget class="QSpinBox" name="spinBox_clients">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
+      <x>270</x>
+      <y>10</y>
       <width>42</width>
       <height>22</height>
      </rect>
@@ -50,14 +50,37 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>20</y>
+      <x>330</x>
+      <y>10</y>
       <width>111</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;number of clients&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_clients">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>50</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Clients:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>80</y>
+      <width>191</width>
+      <height>121</height>
+     </rect>
     </property>
    </widget>
   </widget>
