@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>561</width>
-    <height>281</height>
+    <width>598</width>
+    <height>272</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -76,16 +76,6 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Clients:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit_clients">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>140</y>
-      <width>221</width>
-      <height>101</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_run_serveer">
     <property name="geometry">
      <rect>
@@ -136,6 +126,16 @@
     </property>
     <property name="text">
      <string>Fill Table</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="list_client">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>231</width>
+      <height>101</height>
+     </rect>
     </property>
    </widget>
   </widget>

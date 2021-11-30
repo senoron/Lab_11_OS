@@ -14,12 +14,6 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_pushButton_stop_clicked()
-{
-
-}
-
-
 void MainWindow::on_pushButton_run_serveer_clicked()
 {
     pid_t pid = fork();
@@ -41,6 +35,7 @@ void MainWindow::on_pushButton_run_serveer_clicked()
 void MainWindow::on_pushButton_clicked()
 {
     CountClients = ui->spinBox_clients->value();
+    idClients.clear();
 
     for (int i = 0 ; i < CountClients ; i++ )
     {
@@ -57,5 +52,22 @@ void MainWindow::on_pushButton_clicked()
             idClients.push_back(pid);
         }
     }
+}
+
+
+void MainWindow::on_pushButton_filltable_clicked()
+{
+    ui->list_client->clear();
+
+    for (int i = 0 ; i < CountClients ; i++ )
+    {
+        ui->list_client->addItem("Client " + QString :: number(i + 1) + " , id : " + QString :: number(idClients[i]));
+    }
+}
+
+
+void MainWindow::on_pushButton_stop_clicked()
+{
+
 }
 
