@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
 }
 
 MainWindow::~MainWindow()
@@ -64,7 +65,23 @@ void MainWindow::init(){
             sem_getvalue(semptr , &temp);
             printf("value sem : %d\n" , temp);
 
+
+            ui->lineEdit_ada->setText(QString::number(lastUpdate.ADA));
+            ui->lineEdit_btc->setText(QString::number(lastUpdate.BTC));
+            ui->lineEdit_doge->setText(QString::number(lastUpdate.DOGE));
+            ui->lineEdit_eth->setText(QString::number(lastUpdate.ETH));
+            ui->lineEdit_ltc->setText(QString::number(lastUpdate.LTC));
+            ui->lineEdit_matic->setText(QString::number(lastUpdate.MATIC));
+            ui->lineEdit_shib->setText(QString::number(lastUpdate.SHIB));
+            ui->lineEdit_sol->setText(QString::number(lastUpdate.SOL));
+
+
+            ui->label_update->setText(lastUpdate.update);
+
+
+            ui->updates->addItem((lastUpdate.update.split(" "))[4]);
             sleep(8);
+
 
             if(i == 5)
                 break;
@@ -76,3 +93,23 @@ void MainWindow::init(){
 
 
 }
+
+
+
+
+void MainWindow::on_updates_currentIndexChanged(int index)
+{
+
+    ui->lineEdit_ada->setText(QString::number(listJson[index].ADA));
+    ui->lineEdit_btc->setText(QString::number(listJson[index].BTC));
+    ui->lineEdit_doge->setText(QString::number(listJson[index].DOGE));
+    ui->lineEdit_eth->setText(QString::number(listJson[index].ETH));
+    ui->lineEdit_ltc->setText(QString::number(listJson[index].LTC));
+    ui->lineEdit_matic->setText(QString::number(listJson[index].MATIC));
+    ui->lineEdit_shib->setText(QString::number(listJson[index].SHIB));
+    ui->lineEdit_sol->setText(QString::number(listJson[index].SOL));
+
+
+    ui->label_update->setText(listJson[index].update);
+}
+

@@ -46,8 +46,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>380</y>
+      <x>20</x>
+      <y>350</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -59,8 +59,8 @@
    <widget class="QLabel" name="label_update">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>380</y>
+      <x>130</x>
+      <y>350</y>
       <width>161</width>
       <height>21</height>
      </rect>
@@ -69,7 +69,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;_________________________&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -161,6 +161,16 @@
      </item>
     </layout>
    </widget>
+   <widget class="QComboBox" name="updates">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>380</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -168,7 +178,7 @@
      <x>0</x>
      <y>0</y>
      <width>567</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

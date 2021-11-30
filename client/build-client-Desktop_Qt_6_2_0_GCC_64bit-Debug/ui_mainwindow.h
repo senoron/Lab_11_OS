@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -29,7 +30,7 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_update;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QLineEdit *lineEdit_ltc;
     QLineEdit *lineEdit_eth;
@@ -47,6 +48,7 @@ public:
     QLineEdit *lineEdit_matic;
     QLabel *label_doge;
     QLabel *label_btc;
+    QComboBox *updates;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -66,100 +68,103 @@ public:
         label_2->setGeometry(QRect(160, 10, 91, 21));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(30, 380, 101, 21));
+        label_3->setGeometry(QRect(20, 350, 101, 21));
         label_update = new QLabel(centralwidget);
         label_update->setObjectName(QString::fromUtf8("label_update"));
-        label_update->setGeometry(QRect(140, 380, 161, 21));
-        widget = new QWidget(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(30, 40, 261, 281));
-        gridLayout = new QGridLayout(widget);
+        label_update->setGeometry(QRect(130, 350, 161, 21));
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(30, 40, 261, 281));
+        gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        lineEdit_ltc = new QLineEdit(widget);
+        lineEdit_ltc = new QLineEdit(layoutWidget);
         lineEdit_ltc->setObjectName(QString::fromUtf8("lineEdit_ltc"));
 
         gridLayout->addWidget(lineEdit_ltc, 7, 1, 1, 1);
 
-        lineEdit_eth = new QLineEdit(widget);
+        lineEdit_eth = new QLineEdit(layoutWidget);
         lineEdit_eth->setObjectName(QString::fromUtf8("lineEdit_eth"));
 
         gridLayout->addWidget(lineEdit_eth, 1, 1, 1, 1);
 
-        label_matic = new QLabel(widget);
+        label_matic = new QLabel(layoutWidget);
         label_matic->setObjectName(QString::fromUtf8("label_matic"));
 
         gridLayout->addWidget(label_matic, 5, 0, 1, 1);
 
-        label_ltc = new QLabel(widget);
+        label_ltc = new QLabel(layoutWidget);
         label_ltc->setObjectName(QString::fromUtf8("label_ltc"));
 
         gridLayout->addWidget(label_ltc, 7, 0, 1, 1);
 
-        label_eth = new QLabel(widget);
+        label_eth = new QLabel(layoutWidget);
         label_eth->setObjectName(QString::fromUtf8("label_eth"));
 
         gridLayout->addWidget(label_eth, 1, 0, 1, 1);
 
-        label_ada = new QLabel(widget);
+        label_ada = new QLabel(layoutWidget);
         label_ada->setObjectName(QString::fromUtf8("label_ada"));
 
         gridLayout->addWidget(label_ada, 3, 0, 1, 1);
 
-        label_shib = new QLabel(widget);
+        label_shib = new QLabel(layoutWidget);
         label_shib->setObjectName(QString::fromUtf8("label_shib"));
 
         gridLayout->addWidget(label_shib, 6, 0, 1, 1);
 
-        lineEdit_ada = new QLineEdit(widget);
+        lineEdit_ada = new QLineEdit(layoutWidget);
         lineEdit_ada->setObjectName(QString::fromUtf8("lineEdit_ada"));
 
         gridLayout->addWidget(lineEdit_ada, 3, 1, 1, 1);
 
-        lineEdit_doge = new QLineEdit(widget);
+        lineEdit_doge = new QLineEdit(layoutWidget);
         lineEdit_doge->setObjectName(QString::fromUtf8("lineEdit_doge"));
 
         gridLayout->addWidget(lineEdit_doge, 4, 1, 1, 1);
 
-        lineEdit_btc = new QLineEdit(widget);
+        lineEdit_btc = new QLineEdit(layoutWidget);
         lineEdit_btc->setObjectName(QString::fromUtf8("lineEdit_btc"));
 
         gridLayout->addWidget(lineEdit_btc, 0, 1, 1, 1);
 
-        label_sol = new QLabel(widget);
+        label_sol = new QLabel(layoutWidget);
         label_sol->setObjectName(QString::fromUtf8("label_sol"));
 
         gridLayout->addWidget(label_sol, 2, 0, 1, 1);
 
-        lineEdit_shib = new QLineEdit(widget);
+        lineEdit_shib = new QLineEdit(layoutWidget);
         lineEdit_shib->setObjectName(QString::fromUtf8("lineEdit_shib"));
 
         gridLayout->addWidget(lineEdit_shib, 6, 1, 1, 1);
 
-        lineEdit_sol = new QLineEdit(widget);
+        lineEdit_sol = new QLineEdit(layoutWidget);
         lineEdit_sol->setObjectName(QString::fromUtf8("lineEdit_sol"));
 
         gridLayout->addWidget(lineEdit_sol, 2, 1, 1, 1);
 
-        lineEdit_matic = new QLineEdit(widget);
+        lineEdit_matic = new QLineEdit(layoutWidget);
         lineEdit_matic->setObjectName(QString::fromUtf8("lineEdit_matic"));
 
         gridLayout->addWidget(lineEdit_matic, 5, 1, 1, 1);
 
-        label_doge = new QLabel(widget);
+        label_doge = new QLabel(layoutWidget);
         label_doge->setObjectName(QString::fromUtf8("label_doge"));
 
         gridLayout->addWidget(label_doge, 4, 0, 1, 1);
 
-        label_btc = new QLabel(widget);
+        label_btc = new QLabel(layoutWidget);
         label_btc->setObjectName(QString::fromUtf8("label_btc"));
 
         gridLayout->addWidget(label_btc, 0, 0, 1, 1);
 
+        updates = new QComboBox(centralwidget);
+        updates->setObjectName(QString::fromUtf8("updates"));
+        updates->setGeometry(QRect(40, 380, 171, 21));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 567, 21));
+        menubar->setGeometry(QRect(0, 0, 567, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

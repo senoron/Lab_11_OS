@@ -52,6 +52,10 @@ public:
     ~MainWindow();
 private slots:
     void init();
+
+
+    void on_updates_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     QList <json> listJson;
