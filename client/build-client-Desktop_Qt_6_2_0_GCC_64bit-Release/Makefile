@@ -172,7 +172,6 @@ DIST          = ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/qt_config.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/spec_post.prf \
-		../client/.qmake.stash \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/toolchain.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -321,7 +320,6 @@ Makefile: ../client/client.pro ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/linux-g++
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/qt_config.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/toolchain.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -462,7 +460,6 @@ Makefile: ../client/client.pro ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/linux-g++
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/qt_config.prf:
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/linux-g++/qmake.conf:
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/exclusive_builds.prf:
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/toolchain.prf:
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/default_pre.prf:
@@ -1027,63 +1024,7 @@ mainwindow.o: ../client/mainwindow.cpp ../client/mainwindow.h \
 		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qjsonarray.h \
 		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/QJsonDocument \
 		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qjsondocument.h \
-		ui_mainwindow.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/QVariant \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/QApplication \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qapplication.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qcoreapplication.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qeventloop.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qfuture.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qfutureinterface.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qmutex.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qresultstore.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qfuture_impl.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qthreadpool.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qthread.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qdeadlinetimer.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qelapsedtimer.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qrunnable.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qexception.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qapplicationpermission.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qcoreapplication_platform.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtGui/qguiapplication.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtGui/qinputmethod.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtGui/qguiapplication_platform.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/QComboBox \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qcombobox.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qstyleoption.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtGui/qvalidator.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qslider.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qabstractslider.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qstyle.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qtabbar.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qrubberband.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qframe.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/QGridLayout \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qgridlayout.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qlayout.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qboxlayout.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/QLabel \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qlabel.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtGui/qpicture.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtGui/qtextdocument.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/QLineEdit \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qlineedit.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtGui/qtextcursor.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtGui/qtextformat.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtGui/qpen.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtGui/qtextoption.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/QMenuBar \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qmenubar.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qmenu.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtGui/qaction.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/QStatusBar \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/qstatusbar.h \
-		../../../../QtSSSS/6.2.0/gcc_64/include/QtWidgets/QWidget
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../client/mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
