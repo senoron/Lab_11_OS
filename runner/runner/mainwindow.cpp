@@ -14,7 +14,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
 void MainWindow::on_pushButton_run_serveer_clicked()
 {
     pid_t pid = fork();
