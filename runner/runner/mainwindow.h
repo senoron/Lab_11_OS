@@ -20,5 +20,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    int CountClients;
+    QString StatusServer;
+    QString WayToServer = "/home/Desktop/Lab11_OS/";
+    QString WayToClient = "//hoem//Desktop//Lab11_OS//client";
 };
 #endif // MAINWINDOW_H
