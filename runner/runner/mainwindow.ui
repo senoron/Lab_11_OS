@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>554</width>
-    <height>316</height>
+    <width>561</width>
+    <height>281</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,8 +20,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>50</y>
+      <x>10</x>
+      <y>60</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -33,8 +33,8 @@
    <widget class="QLineEdit" name="lineEdit_state">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>50</y>
+      <x>60</x>
+      <y>60</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -43,8 +43,8 @@
    <widget class="QSpinBox" name="spinBox_clients">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>51</y>
+      <x>330</x>
+      <y>60</y>
       <width>42</width>
       <height>21</height>
      </rect>
@@ -53,8 +53,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>50</y>
+      <x>380</x>
+      <y>60</y>
       <width>111</width>
       <height>21</height>
      </rect>
@@ -66,7 +66,7 @@
    <widget class="QLabel" name="label_clients">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>110</y>
       <width>71</width>
       <height>16</height>
@@ -79,18 +79,18 @@
    <widget class="QTextEdit" name="textEdit_clients">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>140</y>
       <width>221</width>
-      <height>161</height>
+      <height>101</height>
      </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_run_serveer">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>0</y>
+      <x>10</x>
+      <y>10</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -102,27 +102,40 @@
    <widget class="QPushButton" name="pushButton_stop">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>190</y>
-      <width>91</width>
+      <x>320</x>
+      <y>210</y>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Stop</string>
+     <string>Kill Processes</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>0</y>
+      <x>320</x>
+      <y>10</y>
       <width>91</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string>Run Clients</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_filltable">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>140</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fill Table</string>
     </property>
    </widget>
   </widget>

@@ -26,20 +26,36 @@ void MainWindow::on_pushButton_run_serveer_clicked()
 
     if(pid == 0)
     {
-
-        qDebug() << "I am child";
+        qDebug() << "I am child-server";
         execvp(argvServer[0] , argvServer);
     }
 
     if(pid > 0)
     {
         idServer = pid;
-        //kill(idServer , SIGKILL);
-        sleep(2);
-        //StatusServer = QString :: number(pid);
         ui->lineEdit_state->setText(StatusServer);
-                //kill(idServer , SIGKILL);
+    }
+}
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    CountClients = ui->spinBox_clients->value();
+
+    for (int i = 0 ; i < CountClients ; i++ )
+    {
+        pid_t pid = fork();
+
+        if(pid == 0)
+        {
+            qDebug() << "I am child-client";
+            execvp(argvClient[0] , argvServer);
+        }
+
+        if(pid > 0)
+        {
+            idClients.push_back(pid);
+        }
     }
 }
 
