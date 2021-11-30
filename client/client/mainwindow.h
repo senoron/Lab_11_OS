@@ -60,7 +60,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 private slots:
-    void init();
+
 
 
     void on_updates_currentIndexChanged(int index);

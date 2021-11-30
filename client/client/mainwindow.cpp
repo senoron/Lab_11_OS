@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <sys/shm.h>
+#include <sys/stat.h>
+#include <sys/mman.h>
 
 void* client( void* Mystruct);
 
@@ -48,7 +51,6 @@ void* client( void* Mystruct)
             printf("value sem : %d\n" , temp);
 
             handleFile = shm_open(memoryName , O_RDWR , 0666);
-
             pBuf = mmap(NULL , sharedSize , PROT_WRITE | PROT_READ , MAP_SHARED , handleFile , 0);
 
             int i = 0;
