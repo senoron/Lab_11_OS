@@ -172,6 +172,7 @@ DIST          = ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/qt_config.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/spec_post.prf \
+		../client/.qmake.stash \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/toolchain.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -320,6 +321,7 @@ Makefile: ../client/client.pro ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/linux-g++
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/qt_config.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/toolchain.prf \
 		../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -460,6 +462,7 @@ Makefile: ../client/client.pro ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/linux-g++
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/qt_config.prf:
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/linux-g++/qmake.conf:
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/exclusive_builds.prf:
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/toolchain.prf:
 ../../../../QtSSSS/6.2.0/gcc_64/mkspecs/features/default_pre.prf:

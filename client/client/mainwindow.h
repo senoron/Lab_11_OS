@@ -15,6 +15,7 @@
 #include <sys/wait.h>
 #include <semaphore.h>
 
+#include "constants.h"
 
 
 #include <QJsonObject>
@@ -39,9 +40,17 @@ struct json{
 
 };
 
+
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+
+struct mystruct{
+    Ui::MainWindow *ui;
+    QList <json> listJson;
+};
+
 
 class MainWindow : public QMainWindow
 {
@@ -58,6 +67,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QList <json> listJson;
+    mystruct *clientStruct;
 };
+
+
 #endif // MAINWINDOW_H
