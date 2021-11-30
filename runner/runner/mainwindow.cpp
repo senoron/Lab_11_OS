@@ -68,6 +68,20 @@ void MainWindow::on_pushButton_filltable_clicked()
 
 void MainWindow::on_pushButton_stop_clicked()
 {
+    for (int i = 0 ; i < CountClients ; i++ )
+    {
+        kill(idClients[i] , SIGKILL);
+    }
 
+    if(idServer != -1)
+    {
+        kill(idServer , SIGKILL);
+    }
+
+    CountClients = 0;
+    idClients.clear();
+    StatusServer = "Killed";
+
+    ui->lineEdit_state->setText(StatusServer);
 }
 

@@ -37,8 +37,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    int CountClients;
-    pid_t idServer;
+    int CountClients = 0;
+    pid_t idServer = -1;
     std::vector<pid_t> idClients;
 
     QString StatusServer = "Running";
