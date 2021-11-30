@@ -25,14 +25,14 @@
 using namespace std;
 
 struct json{
-    float BTC;
-    float ETH;
-    float SOL;
-    float ADA;
-    float DOGE;
-    float MATIC;
-    float SHIB;
-    float LTC;
+    double BTC;
+    double ETH;
+    double SOL;
+    double ADA;
+    double DOGE;
+    double MATIC;
+    double SHIB;
+    double LTC;
 
     QString update;
 
@@ -54,5 +54,6 @@ private slots:
     void init();
 private:
     Ui::MainWindow *ui;
+    QList <json> listJson;
 };
 #endif // MAINWINDOW_H

@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -43,9 +44,20 @@ void MainWindow::init(){
 
             QJsonDocument jsondocument = QJsonDocument::fromJson(str);
 
+            QJsonObject details= jsondocument.object().value("detail").toObject();
 
+            lastUpdate.ADA=details.value("ADA").toDouble();
+            lastUpdate.BTC=details.value("BTC").toDouble();
+            lastUpdate.DOGE=details.value("DOGE").toDouble();
+            lastUpdate.ETH=details.value("ETH").toDouble();
+            lastUpdate.LTC=details.value("LTC").toDouble();
+            lastUpdate.MATIC=details.value("MATIC").toDouble();
+            lastUpdate.SHIB=details.value("SHIB").toDouble();
+            lastUpdate.SOL=details.value("SOL").toDouble();
 
+            lastUpdate.update=details.value("lastUpdated").toString();
 
+            listJson.push_back(lastUpdate);
 
             sem_post(semptr);
 
