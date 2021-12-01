@@ -2,7 +2,7 @@ const {PriceGetter} = require('crypto-price-getter');
 const fs = require('fs');
 
 let fileName = 'Prices.json';
-const toSearch = ['BTC', 'ETH', 'SOL', 'ADA', 'DOGE', 'MATIC', 'SHIB', 'LTC',]
+const toSearch = ['BTC', 'ETH', 'SOL', 'ADA', 'DOGE', 'MATIC', 'BCH', 'LTC',]
 let result = {};
 
 let getPrice = async () => {
@@ -23,4 +23,4 @@ let getPrice = async () => {
 }
 
 getPrice();
-setInterval(getPrice, 60000);
+setInterval(getPrice, 15000);

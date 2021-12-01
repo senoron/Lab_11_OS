@@ -43,7 +43,7 @@ private:
 
     QString StatusServer = "Running";
 
-    char* argvServer[2] = {"//home//volframiy//Desktop//Lab11_OS//Lab11_OS//server//server" , NULL};
-    char* argvClient[2] = {"////home//volframiy//Desktop//Lab11_OS//Lab11_OS//client//client//" , NULL};
+    char* argvServer[2] = {"..//..//server-qt//build-server-qt-Desktop-Debug//server-qt" , NULL};
+    char* argvClient[2] = {"..//..//client//build-client-Desktop-Debug//client" , NULL};
 };
 #endif // MAINWINDOW_H

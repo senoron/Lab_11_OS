@@ -17,40 +17,9 @@
 
 #include "..//..//constants.h"
 
-
-#include <QJsonObject>
-#include <QJsonArray>
-#include <QJsonDocument>
-
-#define CountMsg 5
-using namespace std;
-
-struct json{
-    double BTC;
-    double ETH;
-    double SOL;
-    double ADA;
-    double DOGE;
-    double MATIC;
-    double BCH;
-    double LTC;
-
-    QString update;
-
-
-};
-
-
-
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
-
-struct mystruct{
-    Ui::MainWindow *ui;
-    QList <json*> listJson;
-};
-
 
 class MainWindow : public QMainWindow
 {
@@ -59,16 +28,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-private slots:
 
-
-
-    void on_updates_currentIndexChanged(int index);
-
-public:
+private:
     Ui::MainWindow *ui;
-    mystruct *clientStruct;
 };
-
-
 #endif // MAINWINDOW_H

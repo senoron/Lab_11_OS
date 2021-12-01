@@ -98,7 +98,7 @@ void* client( void* Mystruct)
                 lastUpdate->LTC=details.value("LTC").toDouble();                                     //ui->label->setText(QString::number(details.value("ADA").toDouble()));
                                                                                                          // ui->lineEdit_ada->setText("  ");
                 lastUpdate->MATIC=details.value("MATIC").toDouble();
-                lastUpdate->SHIB=details.value("SHIB").toDouble();
+                lastUpdate->BCH=details.value("BCH").toDouble();
                 lastUpdate->SOL=details.value("SOL").toDouble();
 
 
@@ -117,7 +117,7 @@ void* client( void* Mystruct)
                 ui->lineEdit_eth->setText(QString::number(lastUpdate->ETH));
                 ui->lineEdit_ltc->setText(QString::number(lastUpdate->LTC));
                 ui->lineEdit_matic->setText(QString::number(lastUpdate->MATIC));
-                ui->lineEdit_shib->setText(QString::number(lastUpdate->SHIB));
+                ui->lineEdit_bch->setText(QString::number(lastUpdate->BCH));
                 ui->lineEdit_sol->setText(QString::number(lastUpdate->SOL));
 
 
@@ -148,10 +148,6 @@ return 0;
 
 
 
-
-
-
-
 void MainWindow::on_updates_currentIndexChanged(int index)
 {
 
@@ -162,7 +158,7 @@ void MainWindow::on_updates_currentIndexChanged(int index)
     ui->lineEdit_eth->setText(QString::number(clientStruct->listJson[index]->ETH));
     ui->lineEdit_ltc->setText(QString::number(clientStruct->listJson[index]->LTC));
     ui->lineEdit_matic->setText(QString::number(clientStruct->listJson[index]->MATIC));
-    ui->lineEdit_shib->setText(QString::number(clientStruct->listJson[index]->SHIB));
+    ui->lineEdit_bch->setText(QString::number(clientStruct->listJson[index]->BCH));
     ui->lineEdit_sol->setText(QString::number(clientStruct->listJson[index]->SOL));
 
 

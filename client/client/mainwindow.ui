@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>567</width>
+    <width>336</width>
     <height>453</height>
    </rect>
   </property>
@@ -116,7 +116,7 @@
      <item row="6" column="0">
       <widget class="QLabel" name="label_shib">
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;SHIB&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;BCH&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
@@ -137,7 +137,7 @@
       </widget>
      </item>
      <item row="6" column="1">
-      <widget class="QLineEdit" name="lineEdit_shib"/>
+      <widget class="QLineEdit" name="lineEdit_bch"/>
      </item>
      <item row="2" column="1">
       <widget class="QLineEdit" name="lineEdit_sol"/>
@@ -164,7 +164,7 @@
    <widget class="QComboBox" name="updates">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>70</x>
       <y>380</y>
       <width>171</width>
       <height>21</height>
@@ -177,7 +177,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>567</width>
+     <width>336</width>
      <height>22</height>
     </rect>
    </property>

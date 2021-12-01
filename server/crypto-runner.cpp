@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
 
-    system("node ../crypto-loader/index.js");
+    system("node /home/senoron/Desktop/Lab_11_OS/crypto-loader/index.js");
 
     return 0;
 }
