@@ -1,0 +1,1 @@
+Run "runner" frile from folder ./runner/build-runner-Desktop-Release

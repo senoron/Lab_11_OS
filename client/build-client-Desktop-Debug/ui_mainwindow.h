@@ -71,7 +71,7 @@ public:
         label_3->setGeometry(QRect(20, 350, 101, 21));
         label_update = new QLabel(centralwidget);
         label_update->setObjectName(QString::fromUtf8("label_update"));
-        label_update->setGeometry(QRect(130, 350, 161, 21));
+        label_update->setGeometry(QRect(130, 350, 191, 21));
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(30, 40, 261, 281));
