@@ -48,7 +48,7 @@ QT_END_NAMESPACE
 
 struct mystruct{
     Ui::MainWindow *ui;
-    QList <json> listJson;
+    QList <json*> listJson;
 };
 
 
@@ -65,7 +65,7 @@ private slots:
 
     void on_updates_currentIndexChanged(int index);
 
-private:
+public:
     Ui::MainWindow *ui;
     mystruct *clientStruct;
 };
