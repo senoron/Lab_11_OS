@@ -25,6 +25,9 @@ int main()
     sem_t* semptr = sem_open(semName, O_CREAT ,  0666 , 1); // creating semaphore
     int temp = -2;
     
+    sem_getvalue(semptr , &temp);
+    printf("value sem : %d\n" , temp);
+    
     if(semptr == SEM_FAILED) { // failed to create the semaphore
     	printf("Error with pBuf");
     }
@@ -57,6 +60,9 @@ int main()
     {   
     	sem_wait(semptr);
     	
+    	sem_getvalue(semptr , &temp);
+    	printf("value sem : %d\n" , temp);
+    	
         sleep(longSleep);
 
         ifstream file; // reating from file with updated crypto
@@ -70,6 +76,9 @@ int main()
       	sprintf((char*)pBuf , "%s" , mess); // writing to memory
       	
     	sem_post(semptr);
+    	
+    	sem_getvalue(semptr , &temp);
+    	printf("value sem : %d\n" , temp);
     	
     	sleep(shortSleep); // time for clients to read the memory 
     }
